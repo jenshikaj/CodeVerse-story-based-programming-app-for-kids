@@ -1,0 +1,36 @@
+# Python backend
+backend/venv/
+__pycache__/
+*.pyc
+
+# Secrets
+backend/.env
+backend/serviceAccountKey.json
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# Flutter build output
+/build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+*.apk
+*.aab
+
+# Android
+android/.gradle/
+android/app/build/
+android/local.properties
+*.jks
+*.keystore
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/ephemeral/
+
+# IDE
+.idea/
+.vscode/
+*.iml
