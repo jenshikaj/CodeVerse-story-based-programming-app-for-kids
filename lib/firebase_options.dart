@@ -41,51 +41,51 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBKBxgOWjzmbzJVUiKmip2lI6H3EiMLQYU',
-    appId: '1:578698359:android:19ba7f0a30414bb8295a72',
-    messagingSenderId: '578698359',
-    projectId: 'codeverse-e2a04',
-    storageBucket: 'codeverse-e2a04.firebasestorage.app',
+    apiKey: '',
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
+    storageBucket: '',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBLRCMRmdljbn1NXr31jBHphm08nq6CKMs',
-    appId: '1:578698359:ios:37397dedf085cc47295a72',
-    messagingSenderId: '578698359',
-    projectId: 'codeverse-e2a04',
-    storageBucket: 'codeverse-e2a04.firebasestorage.app',
-    androidClientId: '578698359-jteug506rhh3f06989mq70fol76pp97v.apps.googleusercontent.com',
-    iosClientId: '578698359-7mknt1akuvrrlu3vus7b8rg0p6pafbel.apps.googleusercontent.com',
-    iosBundleId: 'com.example.codeverse',
+    apiKey: '',
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
+    storageBucket: '',
+    androidClientId: '',
+    iosClientId: '',
+    iosBundleId: '',
   );
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBkqrniYX9ijmPlThCM0s_M64MG-5ORwIg',
-    appId: '1:578698359:web:c87765e318ea21fd295a72',
-    messagingSenderId: '578698359',
-    projectId: 'codeverse-e2a04',
-    authDomain: 'codeverse-e2a04.firebaseapp.com',
-    storageBucket: 'codeverse-e2a04.firebasestorage.app',
+    apiKey: '',
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
+    authDomain: '',
+    storageBucket: '',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBLRCMRmdljbn1NXr31jBHphm08nq6CKMs',
-    appId: '1:578698359:ios:37397dedf085cc47295a72',
-    messagingSenderId: '578698359',
-    projectId: 'codeverse-e2a04',
-    storageBucket: 'codeverse-e2a04.firebasestorage.app',
-    androidClientId: '578698359-jteug506rhh3f06989mq70fol76pp97v.apps.googleusercontent.com',
-    iosClientId: '578698359-7mknt1akuvrrlu3vus7b8rg0p6pafbel.apps.googleusercontent.com',
-    iosBundleId: 'com.example.codeverse',
+    apiKey: '',
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
+    storageBucket: '',
+    androidClientId: '',
+    iosClientId: '',
+    iosBundleId: '',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBkqrniYX9ijmPlThCM0s_M64MG-5ORwIg',
-    appId: '1:578698359:web:b84261a43144bc19295a72',
-    messagingSenderId: '578698359',
-    projectId: 'codeverse-e2a04',
-    authDomain: 'codeverse-e2a04.firebaseapp.com',
-    storageBucket: 'codeverse-e2a04.firebasestorage.app',
+    apiKey: '',
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
+    authDomain: '',
+    storageBucket: '',
   );
 
 }
