@@ -255,7 +255,7 @@ flutter doctor
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/jenshikaj/CodeVerse.git
+git clone https://github.com/jenshikaj/CodeVerse-story-based-programming-app-for-kids.git
 cd CodeVerse
 ```
 
