@@ -35,14 +35,7 @@ aged 8–12 through personalised, generated stories and interactive quizzes.
   - [3. Backend setup](#3-backend-setup)
   - [4. Flutter setup](#4-flutter-setup)
   - [5. Running the application](#5-running-the-application)
-- [API Reference](#api-reference)
 - [Data Model](#data-model)
-- [Security](#security)
-- [Design Decisions](#design-decisions)
-- [Known Limitations](#known-limitations)
-- [Future Work](#future-work)
-- [Academic Context](#academic-context)
-- [Licence](#licence)
 
 ---
 
@@ -73,33 +66,49 @@ and four narrative genres: **Adventure**, **Fantasy**, **Fairy Tales** and
 
 ### Onboarding and Authentication
 
-| Splash | Onboarding | Welcome |
+| Splash | Onboarding I | Onboarding II |
 |:---:|:---:|:---:|
-| <img src="docs/screenshots/Splash Screen.png" width="220"/> | <img src="docs/screenshots/On Boarding Screen I.png" width="220"/> | <img src="docs/screenshots/Welcome Screen.png" width="220"/> |
+| <img src="docs/screenshots/Splash Screen.png" width="220"/> | <img src="docs/screenshots/On Boarding Screen I.png" width="220"/> | <img src="docs/screenshots/On Boarding Screen II.png" width="220"/> |
 
-| Login | Sign Up | Email Verification |
+| Onboarding III | Welcome | Login |
 |:---:|:---:|:---:|
-| <img src="docs/screenshots/Login Screen.png" width="220"/> | <img src="docs/screenshots/Signup Screen.png" width="220"/> | <img src="docs/screenshots/Email Verification Screen.png" width="220"/> |
+| <img src="docs/screenshots/On Boarding Screen III.png" width="220"/> | <img src="docs/screenshots/Welcome Screen.png" width="220"/> | <img src="docs/screenshots/Login Screen.png" width="220"/> |
+
+| Sign Up | Email Verification | Logout |
+|:---:|:---:|:---:|
+| <img src="docs/screenshots/Signup Screen.png" width="220"/> | <img src="docs/screenshots/Email Verification Screen.png" width="220"/> |<img src="docs/screenshots/Logout Confirmation Message Screen.png" width="220"/> |
+
+| Forget Password | Password Reset via Email | Password Reset via Contact |
+|:---:|:---:|:---:|
+| <img src="docs/screenshots/Forget Password Screen.png" width="220"/> | <img src="docs/screenshots/Forget Password - Email Screen.png" width="220"/> | <img src="docs/screenshots/Forget Password - Contact Screen.png" width="220"/> |
 
 ### Core Experience
 
-| Dashboard | Category Stories | Story Detail |
+| Dashboard | Category Stories | Category Stories |
 |:---:|:---:|:---:|
-| <img src="docs/screenshots/Dashboard Screen.png" width="220"/> | <img src="docs/screenshots/Sequence Stories.png" width="220"/> | <img src="docs/screenshots/Story Screen.png" width="220"/> |
+| <img src="docs/screenshots/Dashboard Screen.png" width="220"/> | <img src="docs/screenshots/Sequence Stories.png" width="220"/> | <img src="docs/screenshots/Loops Stories.png" width="220"/> |
 
-| Create Story | Generated Story | Quiz |
+| Category Stories | Category Stories | Create Story I |
 |:---:|:---:|:---:|
-| <img src="docs/screenshots/Question Screen.png" width="220"/> | <img src="docs/screenshots/Question With Hint Screen.png" width="220"/> | <img src="docs/screenshots/Review Quiz Screen I.png" width="220"/> |
+| <img src="docs/screenshots/Conditionals Stories.png" width="220"/> | <img src="docs/screenshots/Variables Stories.png" width="220"/> | <img src="docs/screenshots/Concept Question Screen.png" width="220"/> |
 
-| Quiz Result | Review Answers | Leaderboard |
+| Create Story II | Loading Story | Generated Story |
 |:---:|:---:|:---:|
-| <img src="docs/screenshots/Marks Screen.png" width="220"/> | <img src="docs/screenshots/Review Quiz Screen II.png" width="220"/> | <img src="docs/screenshots/Leaderboard Screen.png" width="220"/> |
+| <img src="docs/screenshots/Genre Question Screen.png" width="220"/> | <img src="docs/screenshots/Loading Screen.png" width="220"/> | <img src="docs/screenshots/Story Screen.png" width="220"/> |
+
+| Quiz Screen | Question with Hint | Quiz Result |
+|:---:|:---:|:---:|
+| <img src="docs/screenshots/Question Screen.png" width="220"/> | <img src="docs/screenshots/Question With Hint Screen.png" width="220"/> | <img src="docs/screenshots/Marks Screen.png" width="220"/> |
+
+| Review Answers I | Review Answers II | Leaderboard |
+|:---:|:---:|:---:|
+| <img src="docs/screenshots/Review Quiz Screen I.png" width="220"/> | <img src="docs/screenshots/Review Quiz Screen II.png" width="220"/> | <img src="docs/screenshots/Leaderboard Screen.png" width="220"/> |
 
 ### Profile
 
-| Profile | Edit Profile | Complete Profile |
+| Profile | Edit Profile | Delete Profile |
 |:---:|:---:|:---:|
-| <img src="docs/screenshots/Profile Screen.png" width="220"/> | <img src="docs/screenshots/Update Profile Screen.png" width="220"/> | <img src="docs/screenshots/Loading Screen.png" width="220"/> |
+| <img src="docs/screenshots/Profile Screen.png" width="220"/> | <img src="docs/screenshots/Update Profile Screen.png" width="220"/> | <img src="docs/screenshots/Profile Delete Confirmation Message Screen.png" width="220"/> |
 
 ---
 
@@ -134,7 +143,7 @@ and four narrative genres: **Adventure**, **Fantasy**, **Fairy Tales** and
 ## System Architecture
 
 ```
-┌─────────────────────────────┐
+┌──────────────────────────────┐
 │      Flutter Application     │
 │                              │
 │  Screens ──> GetX Controllers│
@@ -169,7 +178,6 @@ and four narrative genres: **Adventure**, **Fantasy**, **Fairy Tales** and
    answers, writes the whole record to Firestore, and returns it as JSON.
 5. The app renders the story and, on request, the quiz.
 
-
 ---
 
 ## Technology Stack
@@ -183,7 +191,6 @@ and four narrative genres: **Adventure**, **Fantasy**, **Fairy Tales** and
 | Authentication | Firebase Authentication |
 | Database | Cloud Firestore |
 | Speech | `flutter_tts` |
-| Config | `python-dotenv` |
 
 ---
 
@@ -346,36 +353,32 @@ flutter run
 | Field | Type | Notes |
 |---|---|---|
 | `Email` | string | Matches the Firebase Auth email; used for lookups |
-| `FullName` | string | |
-| `Phone` | string | |
+| `FullName` | string | Full Name|
+| `Phone` | string | Contact Number|
 | `ProfileImage` | string | Base64-encoded image, or empty |
 | `Score` | number | Cumulative quiz points |
-| `CreatedAt` | timestamp | |
-
-> Documents missing `Score` are excluded from the leaderboard's `orderBy`
-> query entirely, so every profile must be created with `Score: 0`.
+| `CreatedAt` | timestamp | Account Created Date and Time |
 
 ### `stories` collection
 
 | Field | Type | Notes |
 |---|---|---|
-| `title` | string | |
+| `title` | string | Story Title |
 | `story` | string | Full narrative text |
-| `mcqs` | string | Raw model output, retained for auditing |
-| `questions` / `hints` | array | |
+| `mcqs` | string | Multiple Choices of Questions |
+| `questions` | array | Questions |
+| `hints` | array | Hints for each generated question |
 | `concept` | string | Used to group stories on the dashboard |
-| `genre` | string | |
-| `language` | string | Currently always `English` |
-| `email` | string | Owner |
-| `character_name` | string | Protagonist, stored to evidence story variety |
-| `model` | string | Which Gemini model produced this story |
-| `created_at` | timestamp | Server-side |
+| `genre` | string | Story Genre |
+| `language` | string | English |
+| `email` | string | User email |
+| `created_at` | timestamp | Story Created Date and Time |
 
 ---
 
-- **Author:** <Jenshika J>
-- **Role:** <Associate Software Engineer>
-- **Year:** <2025>
+**Author:** Jenshika J
+**Role:** Associate Software Engineer
+**Year:** 2025
 
 <div align="center">
 Happy Coding!
