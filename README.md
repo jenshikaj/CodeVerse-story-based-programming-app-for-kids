@@ -9,10 +9,10 @@
 An AI-powered mobile application that teaches programming concepts to children
 aged 8–12 through personalised, generated stories and interactive quizzes.
 
-![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?logo=dart&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-3.x-000000?logo=flask&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-3.22.3-02569B?logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-3.4.4-0175C2?logo=dart&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.12.3-3776AB?logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-3.1.0-000000?logo=flask&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-Auth%20%2B%20Firestore-FFCA28?logo=firebase&logoColor=black)
 ![Gemini](https://img.shields.io/badge/Google-Gemini%20API-4285F4?logo=google&logoColor=white)
 
@@ -376,9 +376,9 @@ flutter run
 
 ---
 
-**Author:** Jenshika J
-**Role:** Associate Software Engineer
-**Year:** 2025
+**Author:** Jenshika J | 
+**Role:** Associate Software Engineer | 
+**Year:** 2025 |
 
 <div align="center">
 Happy Coding!
