@@ -84,11 +84,11 @@ and four narrative genres: **Adventure**, **Fantasy**, **Fairy Tales** and
 
 ### Core Experience
 
-| Dashboard | Category Stories | Category Stories |
+| Dashboard | Sequence Category | Loops Category |
 |:---:|:---:|:---:|
 | <img src="docs/screenshots/Dashboard Screen.png" width="220"/> | <img src="docs/screenshots/Sequence Stories.png" width="220"/> | <img src="docs/screenshots/Loops Stories.png" width="220"/> |
 
-| Category Stories | Category Stories | Create Story I |
+| Conditionals Category | Variables Category | Create Story I |
 |:---:|:---:|:---:|
 | <img src="docs/screenshots/Conditionals Stories.png" width="220"/> | <img src="docs/screenshots/Variables Stories.png" width="220"/> | <img src="docs/screenshots/Concept Question Screen.png" width="220"/> |
 
@@ -378,7 +378,7 @@ flutter run
 
 **Author:** Jenshika J | 
 **Role:** Associate Software Engineer | 
-**Year:** 2025 |
+**Year:** 2025
 
 <div align="center">
 Happy Coding!
