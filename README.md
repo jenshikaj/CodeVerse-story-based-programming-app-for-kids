@@ -240,8 +240,8 @@ codeverse/
 
 | Requirement | Version |
 |---|---|
-| Flutter SDK | 3.x or later |
-| Dart SDK | 3.x (bundled with Flutter) |
+| Flutter SDK | 3.22.3 or later |
+| Dart SDK | 3.4.4 (bundled with Flutter) |
 | Python | 3.10 or later |
 | Android Studio / Xcode | For emulator or device builds |
 | Google account | For Firebase and the Gemini API |
